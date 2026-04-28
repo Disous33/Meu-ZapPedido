@@ -27,6 +27,15 @@ npm run lint
 npm run build
 ```
 
+## Deploy na Vercel
+
+Se importar a pasta `stack-rush` como raiz do projeto, use:
+
+- Build Command: `npm run build`
+- Output Directory: `dist`
+
+Se importar a pasta superior `Nova pasta`, o arquivo `../vercel.json` já usa `npm --prefix stack-rush run build` e aponta para `stack-rush/dist`.
+
 ## Persistência
 
 Esta versão usa um repositório local baseado em `localStorage` para manter o fluxo completo funcionando sem depender de serviços externos. A camada de dados está centralizada em `src/App.tsx` e pode ser substituída por Supabase, Firebase, PostgreSQL ou API própria mantendo os mesmos modelos principais: usuários, lojas, produtos e pedidos.
